@@ -10,7 +10,7 @@
     <color name="login_back">#4A4B5A</color>
     <color name="primary">#936EE3</color>
     <color name="secondary">#262E3B</color>
-    <color name="get_started">#936EE3</color>
     <color name="back_color">#F5FFFE</color>
+    <color name="sign_up_with_buttons_back">#EAF2F1</color>
 
 </resources>

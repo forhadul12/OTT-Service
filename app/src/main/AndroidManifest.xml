@@ -16,11 +16,8 @@
         android:theme="@style/Theme.OTTService"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.GetStartedActivity"
-            android:exported="true">
+            android:name=".view.OTPActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +25,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.GetStartedActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.MainActivity"
-            android:exported="true"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
