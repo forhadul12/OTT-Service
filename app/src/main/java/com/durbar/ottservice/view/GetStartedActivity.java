@@ -5,20 +5,27 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.Toast;
 
 import com.durbar.ottservice.R;
+import com.durbar.ottservice.databinding.ActivityGetStartedBinding;
 
 public class GetStartedActivity extends AppCompatActivity {
 
-    private ConstraintLayout constraintLayout;
+
+    private ActivityGetStartedBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
-        constraintLayout = findViewById(R.id.constraintLayout);
+        binding = ActivityGetStartedBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        constraintLayout.setOnClickListener(view -> {
+
+        binding.constraintLayout.setOnClickListener(view -> {
+            gotoMainActivity();
+        });
+        binding.getStartedTv.setOnClickListener(view -> {
             gotoMainActivity();
         });
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:src="@color/black"
+        android:contentDescription="@string/video_thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/movieTitleTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/video_image"
+        app:layout_constraintTop_toBottomOf="@+id/video_image" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/movieGenreTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/video_image"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <RatingBar
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:theme="@style/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/video_image"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:rating="3.5"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="@+id/video_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/free_back"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:text="Free"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

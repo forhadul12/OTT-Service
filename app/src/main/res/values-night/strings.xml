@@ -11,4 +11,8 @@
     <string name="_login">Login</string>
     <string name="we_have_sent_otp">We Have Sent OTP</string>
     <string name="use_the_phone_number_to_register_or_login_ott">Use the phone number to register or login OTT</string>
+    <!--navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="video_thumbnail">Video Thumbnail</string>
 </resources>

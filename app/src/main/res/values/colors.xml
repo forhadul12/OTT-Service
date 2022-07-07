@@ -11,6 +11,9 @@
     <color name="primary">#936EE3</color>
     <color name="secondary">#262E3B</color>
     <color name="back_color">#F5FFFE</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="dusk_yellow">#ffc922</color>
     <color name="sign_up_with_buttons_back">#EAF2F1</color>
+    <color name="red">#FF3333</color>
 
 </resources>
