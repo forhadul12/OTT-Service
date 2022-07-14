@@ -2,7 +2,6 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.HomeFragment">
@@ -12,7 +11,12 @@
         android:layout_height="match_parent">
 
 
+
+
+
+        <!--RECENTLY ADDED-->
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recently_added_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -45,8 +49,197 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7"
-                tools:listitem="@layout/main_product_cart" />
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--DHALLYWOOD-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dhallywood_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recently_added_container">
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dhallywood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dhallywood_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dhallywood_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--TAMIL-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tamil_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dhallywood_container">
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tamil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tamil_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tamil_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--ENGLISH-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/english_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tamil_container">
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/english_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/englilsh_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--TV SERIES-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_series_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/english_container">
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV Series"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_series_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tv_series_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--POPULAR DRAMA-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popular_drama_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_series_container">
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV Series"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/popular_drama_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_drama_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

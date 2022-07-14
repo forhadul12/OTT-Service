@@ -1,10 +1,12 @@
- package com.durbar.ottservice;
+ package com.durbar.ottservice.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+import com.durbar.ottservice.R;
+
+ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

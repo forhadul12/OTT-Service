@@ -39,6 +39,21 @@ public class HomeFragment extends Fragment {
         binding.recentlyAddedRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.recentlyAddedRv.setAdapter(new RecentlyAddedAdapter());
 
+        binding.dhallywoodRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        binding.dhallywoodRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.tamilRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        binding.tamilRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.englilshRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        binding.englilshRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.tvSeriesRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        binding.tvSeriesRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.popularDramaRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        binding.popularDramaRv.setAdapter(new RecentlyAddedAdapter());
+
 
     }
 }
