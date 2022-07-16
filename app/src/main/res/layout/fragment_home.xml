@@ -13,13 +13,14 @@
         <LinearLayout
             android:id="@+id/tab_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:orientation="horizontal"
+            android:padding="5dp"
             android:weightSum="4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="5dp">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tab_home"
@@ -45,6 +46,7 @@
                 android:layout_weight="1"
                 android:text="Live" />
 
+
             <TextView
                 android:id="@+id/tab_tv_shows"
                 style="@style/tabTextViewStyleInactiveStyle"
@@ -54,9 +56,6 @@
                 android:text="TV Shows" />
 
         </LinearLayout>
-
-
-
 
 
         <!--RECENTLY ADDED-->
