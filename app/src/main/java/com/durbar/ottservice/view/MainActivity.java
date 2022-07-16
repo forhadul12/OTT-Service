@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.bottomNav.setBackground(null);
+        binding.bottomNav.setSelectedItemId(R.id.nav_home);
+        binding.bottomNav.findViewById(R.id.nav_home).setEnabled(false);
+
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, binding.drawerLayout, R.string.nav_open, R.string.nav_close);
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -45,6 +49,33 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return true;
+        });
+
+        binding.bottomNav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.nav_my_list:
+                    Toast.makeText(this, "my list", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.nav_movies:
+                    Toast.makeText(this, "movies", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.nav_tv:
+                    Toast.makeText(this, "tv", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.nav_profile:
+                    Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show();
+                    break;
+
+            }
+            return true;
+        });
+
+
+        binding.searchIv.setOnClickListener(view -> {
+            Toast.makeText(this, "search", Toast.LENGTH_SHORT).show();
+        });
+        binding.premiumCrownIv.setOnClickListener(view -> {
+            Toast.makeText(this, "premium", Toast.LENGTH_SHORT).show();
         });
 
     }

@@ -16,6 +16,7 @@
     <color name="sign_up_with_buttons_back">#EAF2F1</color>
     <color name="red">#FF3333</color>
     <color name="tab_text_color">#BDBDBD</color>
+    <color name="transparent">#00000000</color>
 
 
 </resources>
