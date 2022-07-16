@@ -15,5 +15,7 @@
     <color name="dusk_yellow">#ffc922</color>
     <color name="sign_up_with_buttons_back">#EAF2F1</color>
     <color name="red">#FF3333</color>
+    <color name="tab_text_color">#BDBDBD</color>
+
 
 </resources>

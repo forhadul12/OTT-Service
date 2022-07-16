@@ -1,15 +1,12 @@
 package com.durbar.ottservice.adapter;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.durbar.ottservice.R;
-import com.durbar.ottservice.databinding.MainProductCartBinding;
-import com.squareup.picasso.Picasso;
+import com.durbar.ottservice.databinding.MainProductCardBinding;
 
 public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdapter.mViewHolder> {
 
@@ -18,7 +15,7 @@ public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdap
     public mViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_product_cart, parent, false);
         //MainProductCartBinding binding = MainProductCartBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new mViewHolder(MainProductCartBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        return new mViewHolder(MainProductCardBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -38,8 +35,8 @@ public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdap
     }
 
     class mViewHolder extends RecyclerView.ViewHolder{
-        MainProductCartBinding binding;
-        public mViewHolder(MainProductCartBinding itemView) {
+        MainProductCardBinding binding;
+        public mViewHolder(MainProductCardBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
         }

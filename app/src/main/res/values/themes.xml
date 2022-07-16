@@ -17,12 +17,14 @@
 
 
 
+    <!--RECYCLER VIEW TITLE-->
     <style name="recyclerViewTitleTextViewStyle" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/recycler_view_title_text_size</item>
     </style>
 
+    <!--RECYCLER VIEW MORE BUTTON-->
     <style name="recyclerViewMoreTextViewStyle" parent="Widget.AppCompat.TextView">
         <item name="android:text">More</item>
         <item name="android:textSize">@dimen/recycler_view_more_text_size</item>
@@ -30,25 +32,37 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="movieTitleTextViewStyle" parent="Widget.AppCompat.TextView">
+
+    <!--VIDEO TITLE-->
+    <style name="videoTitleTextViewStyle" parent="Widget.AppCompat.TextView">
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:text">Dhaka Attack</item>
         <item name="android:textSize">@dimen/video_title_text_size</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <!--VIDEO GENRE-->
     <style name="movieGenreTextViewStyle" parent="Widget.AppCompat.TextView">
         <item name="android:text">Action/Thriller</item>
         <item name="android:textSize">@dimen/video_genre_text_size</item>
     </style>
 
-    <style name="tabTextViewStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">@dimen/tab_text_size</item>
+    <!--TAB TEXTVIEW INACTIVE-->
+    <style name="tabTextViewStyleInactiveStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:textSize">@dimen/tab_text_inactive_size</item>
         <item name="android:gravity">center</item>
+    </style>
+
+    <!--TAB TEXTVIEW ACTIVE-->
+    <style name="tabTextViewStyleActiveStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tab_text_active_size</item>
+        <item name="android:gravity">top|center</item>
     </style>
 
 
 
+    <!--RATING BAR-->
     <style name="rating" parent="Widget.AppCompat.RatingBar">
         <item name="colorControlNormal">@color/light_gray</item>
         <item name="colorControlActivated">@color/dusk_yellow</item>

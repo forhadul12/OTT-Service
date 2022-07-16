@@ -10,6 +10,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tab_home"
+                style="@style/tabTextViewStyleActiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Home" />
+
+            <TextView
+                android:id="@+id/tab_movies"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Movies" />
+
+            <TextView
+                android:id="@+id/tab_live"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Live" />
+
+            <TextView
+                android:id="@+id/tab_tv_shows"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TV Shows" />
+
+        </LinearLayout>
+
 
 
 
@@ -22,7 +67,7 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/tab_container">
 
             <TextView
                 android:id="@+id/textView7"
@@ -90,6 +135,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+        <ImageView
+            android:id="@+id/movies_on_sale_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/movies_onsale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dhallywood_container" />
+
         <!--TAMIL-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tamil_container"
@@ -98,7 +153,7 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dhallywood_container">
+            app:layout_constraintTop_toBottomOf="@+id/movies_on_sale_iv">
 
             <TextView
                 android:id="@+id/textView9"
@@ -166,6 +221,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ImageView
+            android:id="@+id/tv_series_on_sale_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tv_onsale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/english_container" />
+
         <!--TV SERIES-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tv_series_container"
@@ -174,7 +238,7 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/english_container">
+            app:layout_constraintTop_toBottomOf="@+id/tv_series_on_sale_iv">
 
             <TextView
                 android:id="@+id/textView11"
@@ -241,6 +305,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/subscription_plan_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/subscribe_plan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popular_drama_container" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
