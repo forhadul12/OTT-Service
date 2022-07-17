@@ -19,7 +19,12 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <string name="video_thumbnail">Video Thumbnail</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="free">Free</string>
+
+
+    <!--<string name="font">sans-serif-condensed</string>-->
+    <string name="font">sans-serif</string>
+
+
 
 </resources>

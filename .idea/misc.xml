@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/free_back.xml" value="0.1735" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/get_started_selector.xml" value="0.1735" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/home.xml" value="0.1735" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/rounded_border_clickable.xml" value="0.1735" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/rounded_corner_for_iv.xml" value="0.1735" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/activity_main.xml" value="0.27870370370370373" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/fragment_home.xml" value="0.2808137215795772" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/fragment_live.xml" value="0.2" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/home_slider_card.xml" value="0.2" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_card.xml" value="0.36666666666666664" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_cart.xml" value="0.3671875" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/recommende_live_card.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/recommended_live_card.xml" value="0.3055555555555556" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/menu/toolbar_menu.xml" value="0.36614583333333334" />
         <entry key="..\:/OTTService/app/src/main/res/drawable/free_back.xml" value="0.282" />

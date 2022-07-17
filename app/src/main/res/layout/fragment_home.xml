@@ -76,7 +76,7 @@
             android:id="@+id/recently_added_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/home_slider_vp">
@@ -95,7 +95,6 @@
                 style="@style/recyclerViewMoreTextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +113,7 @@
             android:id="@+id/dhallywood_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recently_added_container">
@@ -162,7 +161,7 @@
             android:id="@+id/tamil_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movies_on_sale_iv">
@@ -200,7 +199,7 @@
             android:id="@+id/english_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tamil_container">
@@ -247,7 +246,7 @@
             android:id="@+id/tv_series_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_series_on_sale_iv">
@@ -285,7 +284,7 @@
             android:id="@+id/popular_drama_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            style="@style/constraint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_series_container">

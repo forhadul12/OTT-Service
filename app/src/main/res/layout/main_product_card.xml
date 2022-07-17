@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/thumbnail_iv"
+        android:id="@+id/main_product_card_thumbnail_iv"
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:background="@drawable/rounded_corner_for_iv"
@@ -18,57 +18,49 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/title_tv"
+        android:id="@+id/main_product_card_title_tv"
         style="@style/videoTitleTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/thumbnail_iv"
-        app:layout_constraintTop_toBottomOf="@+id/thumbnail_iv" />
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_thumbnail_iv" />
 
     <TextView
-        android:id="@+id/subtitle_tv"
+        android:id="@+id/main_product_card_subtitle_tv"
         style="@style/movieGenreTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/thumbnail_iv"
-        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_title_tv" />
 
     <RatingBar
-        android:id="@+id/rating_bar"
+        android:id="@+id/main_product_card_rating_bar"
         style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rating="3.5"
         android:theme="@style/rating"
-        app:layout_constraintStart_toStartOf="@+id/thumbnail_iv"
-        app:layout_constraintTop_toBottomOf="@+id/subtitle_tv" />
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_subtitle_tv" />
 
     <ImageView
-        android:id="@+id/heart_shape_iv"
+        android:id="@+id/main_product_card_heart_shape_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="12dp"
         android:src="@drawable/heart"
-        app:layout_constraintBottom_toBottomOf="@+id/thumbnail_iv"
+        app:layout_constraintBottom_toBottomOf="@+id/main_product_card_thumbnail_iv"
         app:layout_constraintStart_toStartOf="parent"
         app:tint="@color/white" />
 
     <TextView
-        android:id="@+id/free_or_premium_tv"
+        android:id="@+id/main_product_card_free_or_premium_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/free_back"
-        android:gravity="center"
-        android:paddingLeft="5dp"
-        android:paddingTop="2dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="2dp"
-        android:text="Free"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+        style="@style/freeFlagTextViewStyle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/free_back"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

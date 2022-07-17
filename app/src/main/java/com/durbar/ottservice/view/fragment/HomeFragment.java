@@ -1,10 +1,10 @@
 package com.durbar.ottservice.view.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,12 +16,11 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.durbar.ottservice.R;
 import com.durbar.ottservice.adapter.RecentlyAddedAdapter;
 import com.durbar.ottservice.adapter.SliderAdapter;
 import com.durbar.ottservice.databinding.FragmentHomeBinding;
+import com.durbar.ottservice.utils.CallBack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +34,13 @@ public class HomeFragment extends Fragment {
     private SliderAdapter sliderAdapter;
     private Handler sliderHandler = new Handler();
 
+    //CallBack
+    private CallBack.TabOnClick callBack;
 
-    public HomeFragment() {
+
+    public HomeFragment(Context context) {
         // Required empty public constructor
+        this.callBack = (CallBack.TabOnClick) context;
     }
 
 
@@ -70,6 +73,10 @@ public class HomeFragment extends Fragment {
 
         binding.popularDramaRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.popularDramaRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.tabLive.setOnClickListener(view1 -> {
+            callBack.tabLiveOnClickCallBack();
+        });
 
 
     }

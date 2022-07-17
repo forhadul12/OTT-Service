@@ -13,12 +13,78 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="fontFamily">@string/font</item>
         <!-- Customize your theme here. -->
     </style>
 
+    <!--RECYCLER VIEW TITLE-->
     <style name="recyclerViewTitleTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">sans-serif-thin</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/recycler_view_title_text_size</item>
+    </style>
+
+    <!--RECYCLER VIEW MORE BUTTON-->
+    <style name="recyclerViewMoreTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:text">More</item>
+        <item name="android:textSize">@dimen/recycler_view_more_text_size</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <!--VIDEO TITLE-->
+    <style name="videoTitleTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:text">Dhaka Attack</item>
+        <item name="android:textSize">@dimen/video_title_text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!--VIDEO GENRE-->
+    <style name="movieGenreTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:text">Action/Thriller</item>
+        <item name="android:textSize">@dimen/video_genre_text_size</item>
+    </style>
+
+    <!--TAB TEXTVIEW INACTIVE-->
+    <style name="tabTextViewStyleInactiveStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:textSize">@dimen/tab_text_inactive_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--TAB TEXTVIEW ACTIVE-->
+    <style name="tabTextViewStyleActiveStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/tab_text_active_size</item>
+        <item name="android:gravity">top|center</item>
+    </style>
+
+    <!--FREE FLAG TEXTVIEW-->
+    <style name="freeFlagTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:text">@string/free</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <!--RATING BAR-->
+    <style name="rating" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlNormal">@color/light_gray</item>
+        <item name="colorControlActivated">@color/dusk_yellow</item>
+    </style>
+
+
+    <!--CONSTRAINT LAYOUT CONTAINER-->
+    <style name="constraint">
+        <item name="android:padding">10dp</item>
     </style>
 </resources>

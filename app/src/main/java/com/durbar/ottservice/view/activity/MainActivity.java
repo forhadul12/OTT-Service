@@ -10,9 +10,11 @@ import android.widget.Toast;
 
 import com.durbar.ottservice.R;
 import com.durbar.ottservice.databinding.ActivityMainBinding;
+import com.durbar.ottservice.utils.CallBack;
 import com.durbar.ottservice.view.fragment.HomeFragment;
+import com.durbar.ottservice.view.fragment.LiveFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CallBack.TabOnClick {
 
     private ActivityMainBinding binding;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment(this)).commit();
 
         binding.navDrawer.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()){
@@ -88,5 +90,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void tabLiveOnClickCallBack() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LiveFragment(this)).commit();
+    }
+
+    @Override
+    public void tabHomeOnClickCallBack() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment(this)).commit();
     }
 }
