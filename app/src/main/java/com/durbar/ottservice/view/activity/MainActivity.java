@@ -1,4 +1,4 @@
-package com.durbar.ottservice.view;
+package com.durbar.ottservice.view.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.durbar.ottservice.R;
 import com.durbar.ottservice.databinding.ActivityMainBinding;
+import com.durbar.ottservice.view.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 

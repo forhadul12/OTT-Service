@@ -1,15 +1,12 @@
-package com.durbar.ottservice.view;
+package com.durbar.ottservice.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.widget.Toast;
 
-import com.durbar.ottservice.R;
 import com.durbar.ottservice.databinding.ActivityGetStartedBinding;
+import com.durbar.ottservice.view.activity.MainActivity;
 
 public class GetStartedActivity extends AppCompatActivity {
 

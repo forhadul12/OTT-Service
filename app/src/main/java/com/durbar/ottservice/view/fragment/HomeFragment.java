@@ -1,4 +1,4 @@
-package com.durbar.ottservice.view;
+package com.durbar.ottservice.view.fragment;
 
 import android.os.Bundle;
 

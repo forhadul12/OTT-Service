@@ -1,4 +1,4 @@
- package com.durbar.ottservice.view;
+ package com.durbar.ottservice.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
