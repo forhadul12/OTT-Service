@@ -77,12 +77,12 @@ public class HomeFragment extends Fragment {
 
     private void setSlider(){
         List<String> images = new ArrayList<>();
-        images.add("https://images.pexels.com/photos/12498564/pexels-photo-12498564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        images.add("https://images.pexels.com/photos/9136582/pexels-photo-9136582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        images.add("https://images.pexels.com/photos/12645600/pexels-photo-12645600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        images.add("https://images.pexels.com/photos/3185041/pexels-photo-3185041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        images.add("https://images.pexels.com/photos/12319685/pexels-photo-12319685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        images.add("https://images.pexels.com/photos/5714602/pexels-photo-5714602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654083046_Qualifier-2-260x372.png&w=1920&q=75");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654438633_2nd-Qualifier-260x372.png&w=1920&q=75");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654438664_Final-260x372.png&w=1920&q=75");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1655215270_BAN-V-PAK-12TH-MATCH.jpg&w=1920&q=75");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideo_poster%2F1631021370_web.jpeg&w=1920&q=75");
+        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideo_poster%2F1630568700_web.jpeg&w=1920&q=75");
         sliderAdapter = new SliderAdapter(binding.homeSliderVp, images);
         binding.homeSliderVp.setAdapter(sliderAdapter);
         binding.homeSliderVp.setClipToPadding(false);
