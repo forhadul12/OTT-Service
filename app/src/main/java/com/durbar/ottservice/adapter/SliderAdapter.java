@@ -33,9 +33,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.mViewHolde
 
         Picasso.get().load(images.get(position)).fit().into(holder.binding.sliderThumbnailIv);
 
-        if (position == images.size() - 2){
+        /*if (position == images.size() - 2){
             viewPager2.post(runnable);
-        }
+        }*/
 
     }
 
@@ -54,11 +54,11 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.mViewHolde
 
 
 
-   private Runnable runnable = new Runnable() {
+   /*private Runnable runnable = new Runnable() {
        @Override
        public void run() {
            images.addAll(images);
            notifyDataSetChanged();
        }
-   };
+   };*/
 }

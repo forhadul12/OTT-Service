@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.durbar.ottservice.databinding.MainProductCardBinding;
+import com.durbar.ottservice.databinding.MainProductWithTextCardBinding;
 
 public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdapter.mViewHolder> {
 
@@ -15,7 +15,7 @@ public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdap
     public mViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_product_cart, parent, false);
         //MainProductCartBinding binding = MainProductCartBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new mViewHolder(MainProductCardBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+        return new mViewHolder(MainProductWithTextCardBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
@@ -35,8 +35,8 @@ public class RecentlyAddedAdapter extends RecyclerView.Adapter<RecentlyAddedAdap
     }
 
     class mViewHolder extends RecyclerView.ViewHolder{
-        MainProductCardBinding binding;
-        public mViewHolder(MainProductCardBinding itemView) {
+        MainProductWithTextCardBinding binding;
+        public mViewHolder(MainProductWithTextCardBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
         }

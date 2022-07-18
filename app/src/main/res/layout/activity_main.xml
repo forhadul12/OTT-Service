@@ -65,10 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/transparent"
-            app:fabCradleMargin="10dp"
-            app:fabCradleRoundedCornerRadius="10dp"
-            app:fabCradleVerticalOffset="2dp">
+            android:background="@color/transparent">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_nav"
@@ -77,7 +74,7 @@
                 android:layout_marginEnd="15dp"
                 app:elevation="5dp"
                 app:labelVisibilityMode="labeled"
-                app:menu="@menu/bottom_nav_menu" />
+                app:menu="@menu/bottom_nav_menu"/>
         </com.google.android.material.bottomappbar.BottomAppBar>
 
 
@@ -91,7 +88,8 @@
             app:elevation="5dp"
             app:layout_anchor="@id/bottom_nav"
             app:maxImageSize="40dp"
-            app:tint="@color/white" />
+            app:tint="@color/white"
+            tools:ignore="DuplicateSpeakableTextCheck"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

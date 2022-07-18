@@ -33,6 +33,8 @@ public class HomeFragment extends Fragment {
     //slider
     private SliderAdapter sliderAdapter;
     private Handler sliderHandler = new Handler();
+    private List<String> images = new ArrayList<>();
+    private boolean inc = true;
 
     //CallBack
     private CallBack.TabOnClick callBack;
@@ -83,7 +85,6 @@ public class HomeFragment extends Fragment {
 
 
     private void setSlider(){
-        List<String> images = new ArrayList<>();
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654083046_Qualifier-2-260x372.png&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654438633_2nd-Qualifier-260x372.png&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654438664_Final-260x372.png&w=1920&q=75");
@@ -115,15 +116,21 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+
     private Runnable sliderRunnable = new Runnable() {
         @Override
         public void run() {
-           /* int current = binding.homeSliderVp.getCurrentItem();
-            Toast.makeText(getActivity(), current+" th", Toast.LENGTH_SHORT).show();
-            if (current>3)
-                binding.homeSliderVp.setCurrentItem(0);
-            else*/
-            binding.homeSliderVp.setCurrentItem(binding.homeSliderVp.getCurrentItem()+1);
+           int current = binding.homeSliderVp.getCurrentItem();
+           if (current==images.size()-1){
+               inc = false;
+           }
+           if (current == 0)
+               inc = true;
+                //binding.homeSliderVp.setCurrentItem(0);
+            if (inc)
+            binding.homeSliderVp.setCurrentItem(current+1);
+            else binding.homeSliderVp.setCurrentItem(current-1);
         }
     };
 }

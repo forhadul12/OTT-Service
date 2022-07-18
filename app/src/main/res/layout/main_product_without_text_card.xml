@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="5dp">
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_5sdp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/recommended_live_thumbnail_iv"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_100sdp"
             android:background="@drawable/rounded_corner_for_iv"
             android:contentDescription="@string/video_thumbnail"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,14 +24,12 @@
 
         <ImageView
             android:id="@+id/recommended_live_heart_shape_iv"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="12dp"
-            android:src="@drawable/heart"
+            style="@style/heartShapeImageView"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:contentDescription="@string/add_to_my_list"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:tint="@color/white" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <TextView

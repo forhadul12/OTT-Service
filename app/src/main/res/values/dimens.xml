@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="recycler_view_title_text_size">18sp</dimen>
-    <dimen name="tab_text_inactive_size">16sp</dimen>
-    <dimen name="tab_text_active_size">18sp</dimen>
-    <dimen name="recycler_view_more_text_size">14sp</dimen>
-    <dimen name="video_title_text_size">14sp</dimen>
-    <dimen name="video_genre_text_size">12sp</dimen>
+    <!--RECYCLER VIEW-->
+    <dimen name="recycler_view_title_text_size">@dimen/_16ssp</dimen>
+    <dimen name="recycler_view_more_text_size">@dimen/_13ssp</dimen>
+
+    <!--TAB-->
+    <dimen name="tab_text_inactive_size">@dimen/_13ssp</dimen>
+    <dimen name="tab_text_active_size">@dimen/_16ssp</dimen>
+
+    <!--PRODUCT CARD-->
+    <dimen name="video_title_text_size">@dimen/_12ssp</dimen>
+    <dimen name="video_genre_text_size">@dimen/_10ssp</dimen>
 </resources>

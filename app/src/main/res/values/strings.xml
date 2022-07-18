@@ -13,6 +13,7 @@
     <string name="_login">Login</string>
     <string name="we_have_sent_otp">We Have Sent OTP</string>
     <string name="use_the_phone_number_to_register_or_login_ott">Use the phone number to register or login OTT</string>
+    <string name="add_to_my_list">Add to my List</string>
 
 
     <!--navigation drawer-->
@@ -24,7 +25,14 @@
 
     <!--<string name="font">sans-serif-condensed</string>-->
     <string name="font">sans-serif</string>
-
+    <string name="play">play</string>
+    <string name="home">Home</string>
+    <string name="movies">Movies</string>
+    <string name="live">Live</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="recommended_live">Recommended Live</string>
+    <string name="news_inside_the_country">News Inside The Country</string>
+    <string name="live_sports">Live Sports</string>
 
 
 </resources>
