@@ -39,7 +39,7 @@ public class LiveFragment extends Fragment {
 
     //News Inside the Country recyclerView
     private NewsInsideTheCountryAdapter newsInsideTheCountryAdapter;
-    private List<String> images = new ArrayList<>();
+
 
     //Live sports recyclerView
     private LiveSportsAdapter liveSportsAdapter;
@@ -89,17 +89,26 @@ public class LiveFragment extends Fragment {
         binding.tabHome.setOnClickListener(view1 -> {
             callBack.tabHomeOnClickCallBack();
         });
+        //Tab movie OnClick
+        binding.tabHome.setOnClickListener(view1 -> {
+            callBack.tabHomeOnClickCallBack();
+        });
+
 
     }
 
 
     private void setNewsInsideTheCountry(ViewPager2 vp, int n) {
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1654670937_CMN-525x285.jpg&w=1920&q=75");
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1656499914_BAN-V-SA-2017-525-X-285.jpg&w=1920&q=75");
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1656845726_525x285.jpg&w=1920&q=75");
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1657178524_CMN-525x285.jpg&w=1920&q=75");
-        images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
+        List<String> images = new ArrayList<>();
+        if (n == 1) {
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1654670937_CMN-525x285.jpg&w=1920&q=75");
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1656499914_BAN-V-SA-2017-525-X-285.jpg&w=1920&q=75");
+        }else {
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1656845726_525x285.jpg&w=1920&q=75");
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1657178524_CMN-525x285.jpg&w=1920&q=75");
+            images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
+        }
         newsInsideTheCountryAdapter = new NewsInsideTheCountryAdapter(images);
         vp.setAdapter(newsInsideTheCountryAdapter);
         vp.setClipToPadding(false);

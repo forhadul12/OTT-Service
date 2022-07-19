@@ -13,6 +13,7 @@ import com.durbar.ottservice.databinding.ActivityMainBinding;
 import com.durbar.ottservice.utils.CallBack;
 import com.durbar.ottservice.view.fragment.HomeFragment;
 import com.durbar.ottservice.view.fragment.LiveFragment;
+import com.durbar.ottservice.view.fragment.MoviesFragment;
 
 public class MainActivity extends AppCompatActivity implements CallBack.TabOnClick {
 
@@ -100,5 +101,10 @@ public class MainActivity extends AppCompatActivity implements CallBack.TabOnCli
     @Override
     public void tabHomeOnClickCallBack() {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment(this)).commit();
+    }
+
+    @Override
+    public void tabMovieOnClickCallBack() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MoviesFragment(this)).commit();
     }
 }

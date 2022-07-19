@@ -76,8 +76,13 @@ public class HomeFragment extends Fragment {
         binding.popularDramaRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.popularDramaRv.setAdapter(new RecentlyAddedAdapter());
 
+        //tab live callback
         binding.tabLive.setOnClickListener(view1 -> {
             callBack.tabLiveOnClickCallBack();
+        });
+        //tab movies callback
+        binding.tabMovies.setOnClickListener(view1 -> {
+            callBack.tabMovieOnClickCallBack();
         });
 
 
