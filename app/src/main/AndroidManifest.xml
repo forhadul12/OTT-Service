@@ -16,18 +16,17 @@
         android:theme="@style/Theme.OTTService"
         tools:targetApi="31">
         <activity
+            android:name=".MoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.OTPActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".view.activity.GetStartedActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

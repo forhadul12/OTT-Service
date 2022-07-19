@@ -75,6 +75,8 @@ public class MoviesFragment extends Fragment {
         //Kolkata
         binding.kolkataRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.kolkataRv.setAdapter(new RecentlyAddedAdapter());
+
+        binding.tabHome.setOnClickListener(view1 -> callBack.tabHomeOnClickCallBack());
     }
 
 
