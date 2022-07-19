@@ -23,4 +23,10 @@
     <string name="recommended_live">Recommended Live</string>
     <string name="news_inside_the_country">News Inside The Country</string>
     <string name="live_sports">Live Sports</string>
+    <string name="go_premium">Go Premium</string>
+    <string name="fagun_theke_fagune">Fagun Theke Fagune</string>
+    <string name="director">Director:</string>
+    <string name="amitabh_reza">Amitabh Reza</string>
+    <string name="_3_579_watching_now">3,579 watching now</string>
+    <string name="search">Search</string>
 </resources>

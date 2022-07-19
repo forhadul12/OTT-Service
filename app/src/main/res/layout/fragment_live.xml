@@ -1,168 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragment.LiveFragment">
 
-    <!--TABS-->
-    <LinearLayout
-        android:id="@+id/tab_container"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:weightSum="4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tab_home"
-            style="@style/tabTextViewStyleInactiveStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/home" />
-
-        <TextView
-            android:id="@+id/tab_movies"
-            style="@style/tabTextViewStyleInactiveStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/movies" />
-
-        <TextView
-            android:id="@+id/tab_live"
-            style="@style/tabTextViewStyleActiveStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/live" />
-
-
-        <TextView
-            android:id="@+id/tab_tv_shows"
-            style="@style/tabTextViewStyleInactiveStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/tv_shows" />
-
-    </LinearLayout>
-
-    <!--RECOMMENDED LIVE-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/recommended_live_container"
-        style="@style/constraint"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tab_container">
-
-        <TextView
-            android:id="@+id/recommended_live_tv"
-            style="@style/recyclerViewTitleTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/recommended_live"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/recommended_live_more_tv"
-            style="@style/recyclerViewMoreTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recommended_live_rv"
-            style="@style/recyclerView"
+        android:layout_height="match_parent">
+        <!--TABS-->
+        <LinearLayout
+            android:id="@+id/tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recommended_live_tv" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tab_home"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home" />
+
+            <TextView
+                android:id="@+id/tab_movies"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/movies" />
+
+            <TextView
+                android:id="@+id/tab_live"
+                style="@style/tabTextViewStyleActiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/live" />
+
+
+            <TextView
+                android:id="@+id/tab_tv_shows"
+                style="@style/tabTextViewStyleInactiveStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tv_shows" />
+
+        </LinearLayout>
+
+        <!--RECOMMENDED LIVE-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recommended_live_container"
+            style="@style/constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_container">
+
+            <TextView
+                android:id="@+id/recommended_live_tv"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recommended_live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recommended_live_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_click_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_live_rv"
+                style="@style/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recommended_live_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--NEWS INSIDE THE COUNTRY-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/news_inside_country_container"
+            style="@style/constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recommended_live_container">
+
+            <TextView
+                android:id="@+id/news_inside_country_tv"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/news_inside_the_country"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/news_inside_country_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/news_inside_country_vp"
+                style="@style/recyclerView"
+                android:layout_height="@dimen/_180sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/news_inside_country_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--LIVE SPORTS-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/live_sports_container"
+            style="@style/constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news_inside_country_container">
+
+            <TextView
+                android:id="@+id/live_sports_tv"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live_sports"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/live_sports_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/live_sports_rv"
+                style="@style/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/live_sports_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--TV SHOWS-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_shows_container"
+            style="@style/constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/live_sports_container">
+
+            <TextView
+                android:id="@+id/tv_shows_tv"
+                style="@style/recyclerViewTitleTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_shows"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_shows_more_tv"
+                style="@style/recyclerViewMoreTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/tv_shows_vp"
+                style="@style/recyclerView"
+                android:layout_height="@dimen/_180sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shows_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--GO PREMIUM BANNER-->
+        <ImageView
+            android:id="@+id/go_premium_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/go_premium"
+            android:src="@drawable/go_premium_banner"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shows_container" />
+
+
+        <!--BOTTOM PRODUCTS-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_product_container"
+            style="@style/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/go_premium_iv">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bottom_product_rv"
+                style="@style/recyclerView"
+                android:layout_marginBottom="@dimen/_40sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--NEWS INSIDE THE COUNTRY-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/news_inside_country_container"
-        style="@style/constraint"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recommended_live_container">
 
-        <TextView
-            android:id="@+id/news_inside_country_tv"
-            style="@style/recyclerViewTitleTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/news_inside_the_country"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/news_inside_country_more_tv"
-            style="@style/recyclerViewMoreTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/news_inside_country_vp"
-            style="@style/recyclerView"
-            android:layout_height="@dimen/_180sdp"
-            android:paddingStart="@dimen/_10sdp"
-            android:paddingEnd="@dimen/_15sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/news_inside_country_tv" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--LIVE SPORTS-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/live_sports_container"
-        style="@style/constraint"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/news_inside_country_container">
-
-        <TextView
-            android:id="@+id/live_sports_tv"
-            style="@style/recyclerViewTitleTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/live_sports"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/live_sports_more_tv"
-            style="@style/recyclerViewMoreTextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/live_sports_rv"
-            style="@style/recyclerView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/live_sports_tv" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

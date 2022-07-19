@@ -5,20 +5,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.durbar.ottservice.adapter.BottomProductsAdapter;
+import com.durbar.ottservice.adapter.LiveSportsAdapter;
 import com.durbar.ottservice.adapter.NewsInsideTheCountryAdapter;
 import com.durbar.ottservice.adapter.RecommendedLiveAdapter;
-import com.durbar.ottservice.adapter.SliderAdapter;
 import com.durbar.ottservice.databinding.FragmentLiveBinding;
 import com.durbar.ottservice.utils.CallBack;
 
@@ -36,9 +37,13 @@ public class LiveFragment extends Fragment {
     //CallBack
     private final CallBack.TabOnClick callBack;
 
-    //News Inside the Country
+    //News Inside the Country recyclerView
     private NewsInsideTheCountryAdapter newsInsideTheCountryAdapter;
     private List<String> images = new ArrayList<>();
+
+    //Live sports recyclerView
+    private LiveSportsAdapter liveSportsAdapter;
+
 
     public LiveFragment(Context context) {
         // Required empty public constructor
@@ -58,19 +63,37 @@ public class LiveFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //Recommended Live recyclerView
         binding.recommendedLiveRv.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         binding.recommendedLiveRv.setAdapter(new RecommendedLiveAdapter());
 
-        setSlider();
+        //News Inside the country using viewPager2
+        setNewsInsideTheCountry(binding.newsInsideCountryVp, 1);
 
+
+        //Live Sports RecyclerView
+        binding.liveSportsRv.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        liveSportsAdapter = new LiveSportsAdapter();
+        binding.liveSportsRv.setAdapter(liveSportsAdapter);
+
+        //set Tv shows
+        setNewsInsideTheCountry(binding.tvShowsVp, 0);
+
+
+        //set Bottom Products
+        binding.bottomProductRv.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        binding.bottomProductRv.setAdapter(new BottomProductsAdapter());
+
+
+        //Tab Home OnClick
         binding.tabHome.setOnClickListener(view1 -> {
             callBack.tabHomeOnClickCallBack();
         });
+
     }
 
 
-
-    private void setSlider(){
+    private void setNewsInsideTheCountry(ViewPager2 vp, int n) {
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1654670937_CMN-525x285.jpg&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1656499914_BAN-V-SA-2017-525-X-285.jpg&w=1920&q=75");
@@ -78,22 +101,20 @@ public class LiveFragment extends Fragment {
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1657178524_CMN-525x285.jpg&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fseries%2F1655379262_sa-v-ban-525.jpg&w=1920&q=75");
         newsInsideTheCountryAdapter = new NewsInsideTheCountryAdapter(images);
-        binding.newsInsideCountryVp.setAdapter(newsInsideTheCountryAdapter);
-        binding.newsInsideCountryVp.setClipToPadding(false);
-        binding.newsInsideCountryVp.setClipChildren(false);
-        binding.newsInsideCountryVp.setOffscreenPageLimit(3);
-        binding.newsInsideCountryVp.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+        vp.setAdapter(newsInsideTheCountryAdapter);
+        vp.setClipToPadding(false);
+        vp.setClipChildren(false);
+        vp.setOffscreenPageLimit(3);
+        vp.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
 
         CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(10));
 
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-            @Override
-            public void transformPage(@NonNull View page, float position) {
-                float r = 1 - Math.abs(position);
+        compositePageTransformer.addTransformer((page, position) -> {
+            float r = 1 - Math.abs(position);
+            if (n == 1)
                 page.setScaleY(0.85f + r * 0.10f);
-            }
         });
-        binding.newsInsideCountryVp.setPageTransformer(compositePageTransformer);
+        vp.setPageTransformer(compositePageTransformer);
     }
 }
