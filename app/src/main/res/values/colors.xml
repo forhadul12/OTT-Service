@@ -17,6 +17,7 @@
     <color name="red">#FF3333</color>
     <color name="tab_text_color">#BDBDBD</color>
     <color name="transparent">#00000000</color>
+    <color name="featured_item_back_color">#343759</color>
 
 
 </resources>

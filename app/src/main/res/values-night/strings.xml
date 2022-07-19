@@ -29,4 +29,17 @@
     <string name="amitabh_reza">Amitabh Reza</string>
     <string name="_3_579_watching_now">3,579 watching now</string>
     <string name="search">Search</string>
+    <string name="dhallywood">Dhallywood</string>
+    <string name="korean">Korean</string>
+    <string name="hindi">Hindi</string>
+    <string name="english">English</string>
+    <string name="video">Video</string>
+    <string name="rework">Rework</string>
+    <string name="_2022">2022</string>
+    <string name="_1hr_2min">1hr 2min</string>
+    <string name="heart">Heart</string>
+    <string name="_345_reviews">345 Reviews</string>
+    <string name="featured_items">Featured Items</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore</string>
+    <string name="kolkata">Kolkata</string>
 </resources>

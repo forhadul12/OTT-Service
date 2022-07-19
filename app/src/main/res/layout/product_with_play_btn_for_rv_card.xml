@@ -39,5 +39,7 @@
         android:layout_marginEnd="@dimen/_25sdp"
         android:layout_marginBottom="@dimen/_4sdp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/play"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
