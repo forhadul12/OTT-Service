@@ -7,4 +7,7 @@ public interface CallBack {
         void tabHomeOnClickCallBack();
         void tabMovieOnClickCallBack();
     }
+    interface MoreOnClick {
+        void moreOnClick(String title);
+    }
 }
