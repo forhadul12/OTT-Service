@@ -15,15 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OTTService"
         tools:targetApi="31">
+
         <activity
-            android:name=".MoreActivity"
+            android:name=".view.activity.MoreActivity"
             android:exported="false" />
         <activity
             android:name=".view.activity.OTPActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.activity.GetStartedActivity"
             android:exported="true">
