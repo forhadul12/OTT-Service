@@ -16,6 +16,7 @@
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/search_back.xml" value="0.3045" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/drawable/top_rounded_back.xml" value="0.3045" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/activity_main.xml" value="0.27870370370370373" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/activity_more.xml" value="0.264" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/background_transparent.xml" value="0.3" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/featured_items.xml" value="0.3" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/fragment_home.xml" value="0.2587284086732819" />
@@ -25,6 +26,7 @@
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_card.xml" value="0.30085470085470084" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_cart.xml" value="0.3671875" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_with_text_card.xml" value="0.30085470085470084" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_with_text_for_grid_card.xml" value="0.30085470085470084" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/main_product_without_text_card.xml" value="0.30085470085470084" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/product_with_director_and_watching_card.xml" value="0.3" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/product_with_play_btn_card.xml" value="0.2" />
@@ -33,6 +35,7 @@
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/recommende_live_card.xml" value="0.36666666666666664" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/layout/recommended_live_card.xml" value="0.3055555555555556" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndProjects/OTT/app/src/main/res/menu/drawer_menu.xml" value="0.30085470085470084" />
         <entry key="..\:/AndProjects/OTT/app/src/main/res/menu/toolbar_menu.xml" value="0.36614583333333334" />
         <entry key="..\:/OTTService/app/src/main/res/drawable/free_back.xml" value="0.282" />
         <entry key="..\:/OTTService/app/src/main/res/drawable/get_started_selector.xml" value="0.161" />

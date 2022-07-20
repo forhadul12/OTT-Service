@@ -54,6 +54,12 @@
     <string name="featured_items">Featured Items</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et dolore</string>
     <string name="kolkata">Kolkata</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="tamil">Tamil</string>
+    <string name="tv_series">TV Series</string>
+    <string name="popular_drama">Popular Drama</string>
+    <string name="recommended">Recommended</string>
+    <string name="watch_trailers">Watch Trailers</string>
 
 
 </resources>

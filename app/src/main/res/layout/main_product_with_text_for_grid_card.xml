@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_3sdp">
+
+
+    <ImageView
+        android:id="@+id/main_product_card_thumbnail_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140sdp"
+        android:background="@drawable/rounded_corner_for_iv"
+        android:contentDescription="@string/video_thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_product_card_title_tv"
+        style="@style/videoTitleTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_thumbnail_iv" />
+
+    <TextView
+        android:id="@+id/main_product_card_subtitle_tv"
+        style="@style/movieGenreTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_title_tv" />
+
+    <RatingBar
+        android:id="@+id/main_product_card_rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="3.5"
+        android:theme="@style/rating"
+        app:layout_constraintStart_toStartOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintTop_toBottomOf="@+id/main_product_card_subtitle_tv" />
+
+    <ImageView
+        android:id="@+id/main_product_card_heart_shape_iv"
+        style="@style/heartShapeImageView"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_product_card_thumbnail_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/add_to_my_list"/>
+
+    <TextView
+        android:id="@+id/main_product_card_free_or_premium_tv"
+        style="@style/freeFlagTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/free_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

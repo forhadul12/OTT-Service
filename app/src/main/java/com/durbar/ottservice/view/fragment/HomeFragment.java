@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.durbar.ottservice.R;
 import com.durbar.ottservice.adapter.RecentlyAddedAdapter;
 import com.durbar.ottservice.adapter.SliderAdapter;
 import com.durbar.ottservice.databinding.FragmentHomeBinding;
@@ -37,12 +38,14 @@ public class HomeFragment extends Fragment {
     private boolean inc = true;
 
     //CallBack
-    private CallBack.TabOnClick callBack;
+    private CallBack.TabOnClick tabOnClick;
+    private CallBack.MoreOnClick moreOnClick;
 
 
     public HomeFragment(Context context) {
         // Required empty public constructor
-        this.callBack = (CallBack.TabOnClick) context;
+        this.tabOnClick = (CallBack.TabOnClick) context;
+        this.moreOnClick = (CallBack.MoreOnClick) context;
     }
 
 
@@ -78,17 +81,52 @@ public class HomeFragment extends Fragment {
 
         //tab live callback
         binding.tabLive.setOnClickListener(view1 -> {
-            callBack.tabLiveOnClickCallBack();
+            tabOnClick.tabLiveOnClickCallBack();
         });
         //tab movies callback
         binding.tabMovies.setOnClickListener(view1 -> {
-            callBack.tabMovieOnClickCallBack();
+            tabOnClick.tabMovieOnClickCallBack();
         });
 
+        //MORE OnClick - Recently Added RecyclerView
+        binding.recentlyAddedMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.recently_added));
+        });
+
+        //MORE OnClick - Dhallywood RecyclerView
+        binding.dhallywoodMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.dhallywood));
+        });
+
+        //MORE OnClick - Tamil RecyclerView
+        binding.tamilMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.tamil));
+        });
+
+        //MORE OnClick - English RecyclerView
+        binding.englishMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.english));
+        });
+
+        //MORE OnClick - TV Series RecyclerView
+        binding.tvSeriesMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.tv_series));
+        });
+
+        //MORE OnClick - Popular Drama RecyclerView
+        binding.popularDramaMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.popular_drama));
+        });
 
     }
 
 
+    /**
+     * set top slider,
+     * using viewpager,
+     * using scaleY
+     * @returns void
+     */
     private void setSlider(){
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654083046_Qualifier-2-260x372.png&w=1920&q=75");
         images.add("https://www.rabbitholebd.com/_next/image?url=https%3A%2F%2Fdidbxtymavoia.cloudfront.net%2Fcms%2Fvideos%2F1654438633_2nd-Qualifier-260x372.png&w=1920&q=75");

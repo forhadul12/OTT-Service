@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -11,11 +12,12 @@ import android.widget.Toast;
 import com.durbar.ottservice.R;
 import com.durbar.ottservice.databinding.ActivityMainBinding;
 import com.durbar.ottservice.utils.CallBack;
+import com.durbar.ottservice.utils.Constants;
 import com.durbar.ottservice.view.fragment.HomeFragment;
 import com.durbar.ottservice.view.fragment.LiveFragment;
 import com.durbar.ottservice.view.fragment.MoviesFragment;
 
-public class MainActivity extends AppCompatActivity implements CallBack.TabOnClick {
+public class MainActivity extends AppCompatActivity implements CallBack.TabOnClick, CallBack.MoreOnClick {
 
     private ActivityMainBinding binding;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -106,5 +108,20 @@ public class MainActivity extends AppCompatActivity implements CallBack.TabOnCli
     @Override
     public void tabMovieOnClickCallBack() {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MoviesFragment(this)).commit();
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void moreOnClick(String title) {
+        gotoMoreActivity(title);
+    }
+
+    /**
+     * goto more activity after click on MORE textView right of recyclerView.
+     */
+    private void gotoMoreActivity(String title){
+        startActivity(new Intent(getApplicationContext(), MoreActivity.class).putExtra(Constants.TOOLBAR_TITLE_KEY, title));
     }
 }

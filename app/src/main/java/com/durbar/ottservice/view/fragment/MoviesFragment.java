@@ -1,5 +1,6 @@
 package com.durbar.ottservice.view.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -30,11 +31,13 @@ public class MoviesFragment extends Fragment {
 
     //OnClick
     //CallBack
-    private CallBack.TabOnClick callBack;
+    private CallBack.TabOnClick tabOnClick;
+    private CallBack.MoreOnClick moreOnClick;
 
-    public MoviesFragment(CallBack.TabOnClick callBack) {
+    public MoviesFragment(Context context) {
         // Required empty public constructor
-        this.callBack = callBack;
+        this.tabOnClick = (CallBack.TabOnClick) context;
+        this.moreOnClick = (CallBack.MoreOnClick) context;
     }
 
     @Override
@@ -55,28 +58,47 @@ public class MoviesFragment extends Fragment {
         //Dhallywood
         binding.dhallywoodRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.dhallywoodRv.setAdapter(new RecentlyAddedAdapter());
+        binding.dhallywoodMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.dhallywood));
+        });
 
         //Tamil
         binding.tamilRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.tamilRv.setAdapter(new RecentlyAddedAdapter());
+        binding.tamilMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.tamil));
+        });
 
         //Hindi
         binding.hindiRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.hindiRv.setAdapter(new RecentlyAddedAdapter());
+        binding.hindiMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.hindi));
+        });
 
         //Korean
         binding.koreanRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.koreanRv.setAdapter(new RecentlyAddedAdapter());
+        binding.koreanMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.korean));
+        });
 
         //English
         binding.englishRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.englishRv.setAdapter(new RecentlyAddedAdapter());
+        binding.englishMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.english));
+        });
 
         //Kolkata
         binding.kolkataRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.kolkataRv.setAdapter(new RecentlyAddedAdapter());
+        binding.kolkataMoreTv.setOnClickListener(view1 -> {
+            moreOnClick.moreOnClick(getContext().getResources().getString(R.string.kolkata));
+        });
 
-        binding.tabHome.setOnClickListener(view1 -> callBack.tabHomeOnClickCallBack());
+        binding.tabHome.setOnClickListener(view1 -> tabOnClick.tabHomeOnClickCallBack());
+        binding.tabLive.setOnClickListener(view1 -> tabOnClick.tabLiveOnClickCallBack());
     }
 
 
