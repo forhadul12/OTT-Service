@@ -43,14 +43,17 @@ public class MainActivity extends AppCompatActivity implements CallBack.TabOnCli
 
         binding.navDrawer.setNavigationItemSelectedListener(item -> {
             switch (item.getItemId()){
-                case R.id.nav_account:
+                case R.id.drawer_account:
                     Toast.makeText(this, "account", Toast.LENGTH_SHORT).show();
                     break;
-                case R.id.nav_logout:
-                    Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.nav_settings:
+                case R.id.drawer_settings:
                     Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.drawer_login_or_signup:
+                    gotToLoginActivity();
+                    break;
+                case R.id.drawer_logout:
+                    Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
                     break;
             }
 
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements CallBack.TabOnCli
                     Toast.makeText(this, "my list", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.nav_movies:
-                    Toast.makeText(this, "movies", Toast.LENGTH_SHORT).show();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MoviesFragment(this)).commit();
                     break;
                 case R.id.nav_tv:
                     Toast.makeText(this, "tv", Toast.LENGTH_SHORT).show();
@@ -84,6 +87,13 @@ public class MainActivity extends AppCompatActivity implements CallBack.TabOnCli
             Toast.makeText(this, "premium", Toast.LENGTH_SHORT).show();
         });
 
+    }
+
+    /**
+     * Start LoginActivity for user Login or signup.
+     */
+    private void gotToLoginActivity() {
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
     @Override
