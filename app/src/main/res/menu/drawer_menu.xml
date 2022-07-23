@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/drawer_account"
-        android:title="My Account" />
+        android:title="@string/my_account" />
 
     <item
         android:id="@+id/drawer_settings"
-        android:title="Settings" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/drawer_login_or_signup"
-        android:title="Login / Signup" />
+        android:title="@string/login_signup" />
 
     <item
         android:id="@+id/drawer_logout"
-        android:title="Logout" />
+        android:title="@string/logout" />
 </menu>

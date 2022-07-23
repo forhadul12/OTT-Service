@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setSlider();
 
+        binding.tabContainer.tabHome.setTextAppearance(getActivity(), R.style.tabTextViewStyleActiveStyle);
         binding.recentlyAddedRv.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         binding.recentlyAddedRv.setAdapter(new RecentlyAddedAdapter());
 
@@ -80,11 +81,11 @@ public class HomeFragment extends Fragment {
         binding.popularDramaRv.setAdapter(new RecentlyAddedAdapter());
 
         //tab live callback
-        binding.tabLive.setOnClickListener(view1 -> {
+        binding.tabContainer.tabLive.setOnClickListener(view1 -> {
             tabOnClick.tabLiveOnClickCallBack();
         });
         //tab movies callback
-        binding.tabMovies.setOnClickListener(view1 -> {
+        binding.tabContainer.tabMovies.setOnClickListener(view1 -> {
             tabOnClick.tabMovieOnClickCallBack();
         });
 

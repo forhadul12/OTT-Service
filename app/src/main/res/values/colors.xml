@@ -18,6 +18,7 @@
     <color name="tab_text_color">#BDBDBD</color>
     <color name="transparent">#00000000</color>
     <color name="featured_item_back_color">#343759</color>
+    <color name="signup_edtx_back">#DEE4E4</color>
 
 
 </resources>

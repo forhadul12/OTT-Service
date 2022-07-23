@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--TABS-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_39sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tab_home"
+            style="@style/tabTextViewStyleInactiveStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home" />
+
+        <TextView
+            android:id="@+id/tab_movies"
+            style="@style/tabTextViewStyleInactiveStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/movies" />
+
+        <TextView
+            android:id="@+id/tab_live"
+            style="@style/tabTextViewStyleInactiveStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/live" />
+
+
+        <TextView
+            android:id="@+id/tab_tv_shows"
+            style="@style/tabTextViewStyleInactiveStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_shows" />
+
+    </LinearLayout>

@@ -52,6 +52,9 @@ public class MoviesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        binding.tabContainer.tabMovies.setTextAppearance(getContext(), R.style.tabTextViewStyleActiveStyle);
+
         //set top movie viewpager
         setMoviesTopViewPager();
 
@@ -97,8 +100,8 @@ public class MoviesFragment extends Fragment {
             moreOnClick.moreOnClick(getContext().getResources().getString(R.string.kolkata));
         });
 
-        binding.tabHome.setOnClickListener(view1 -> tabOnClick.tabHomeOnClickCallBack());
-        binding.tabLive.setOnClickListener(view1 -> tabOnClick.tabLiveOnClickCallBack());
+        binding.tabContainer.tabHome.setOnClickListener(view1 -> tabOnClick.tabHomeOnClickCallBack());
+        binding.tabContainer.tabLive.setOnClickListener(view1 -> tabOnClick.tabLiveOnClickCallBack());
     }
 
 

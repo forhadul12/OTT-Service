@@ -48,4 +48,24 @@
     <string name="popular_drama">Popular Drama</string>
     <string name="recommended">Recommended</string>
     <string name="watch_trailers">Watch Trailers</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="my_account">My Account</string>
+    <string name="settings">Settings</string>
+    <string name="login_signup">Login / Signup</string>
+    <string name="logout">Logout</string>
+    <string name="select_your_country_amp_enter_phone_number"><![CDATA[Select Your Country & Enter Phone Number]]></string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="choose_your_plans">Choose Your Plans</string>
+    <string name="choose_your_payment_methods">Choose Your Payment Methods</string>
+    <string name="password">Password</string>
+    <string name="monthly_plan">Monthly Plan</string>
+    <string name="pay_with_bkash">Pay With bKash</string>
+    <string name="signup_in">SIGNUP IN</string>
+    <string name="premium_account">PREMIUM ACCOUNT</string>
+    <string name="_password">Password</string>
+    <string name="login_with">Login with</string>
 </resources>

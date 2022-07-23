@@ -11,8 +11,14 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/_45sdp">
 
+
+        <include layout="@layout/tab_layout"
+            android:id="@+id/tab_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
         <!--TABS-->
-        <LinearLayout
+       <!-- <LinearLayout
             android:id="@+id/tab_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_39sdp"
@@ -57,7 +63,7 @@
                 android:layout_weight="1"
                 android:text="@string/tv_shows" />
 
-        </LinearLayout>
+        </LinearLayout>-->
 
 
         <!--SLIDER-->

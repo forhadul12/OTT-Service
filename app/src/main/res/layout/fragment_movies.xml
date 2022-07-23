@@ -12,7 +12,13 @@
         android:layout_marginBottom="@dimen/_45sdp">
 
         <!--TABS-->
-        <LinearLayout
+        <include layout="@layout/tab_layout"
+            android:id="@+id/tab_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <!--<LinearLayout
             android:id="@+id/tab_container"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -57,7 +63,7 @@
                 android:layout_weight="1"
                 android:text="@string/tv_shows" />
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/movies_top_vp"

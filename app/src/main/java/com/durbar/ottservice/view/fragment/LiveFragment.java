@@ -1,6 +1,7 @@
 package com.durbar.ottservice.view.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +17,15 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.durbar.ottservice.R;
 import com.durbar.ottservice.adapter.BottomProductsAdapter;
 import com.durbar.ottservice.adapter.LiveSportsAdapter;
 import com.durbar.ottservice.adapter.NewsInsideTheCountryAdapter;
 import com.durbar.ottservice.adapter.RecommendedLiveAdapter;
 import com.durbar.ottservice.databinding.FragmentLiveBinding;
 import com.durbar.ottservice.utils.CallBack;
+import com.durbar.ottservice.utils.Constants;
+import com.durbar.ottservice.view.activity.MoreActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +67,7 @@ public class LiveFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.tabContainer.tabLive.setTextAppearance(getActivity(), R.style.tabTextViewStyleActiveStyle);
         //Recommended Live recyclerView
         binding.recommendedLiveRv.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         binding.recommendedLiveRv.setAdapter(new RecommendedLiveAdapter());
@@ -86,13 +91,18 @@ public class LiveFragment extends Fragment {
 
 
         //Tab Home OnClick
-        binding.tabHome.setOnClickListener(view1 -> {
+        binding.tabContainer.tabHome.setOnClickListener(view1 -> {
             callBack.tabHomeOnClickCallBack();
         });
         //Tab movie OnClick
-        binding.tabHome.setOnClickListener(view1 -> {
-            callBack.tabHomeOnClickCallBack();
+        binding.tabContainer.tabMovies.setOnClickListener(view1 -> {
+            callBack.tabMovieOnClickCallBack();
         });
+
+        binding.recommendedLiveMoreTv.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MoreActivity.class).putExtra(Constants.TOOLBAR_TITLE_KEY, "Recommended Live")));
+        binding.newsInsideCountryMoreTv.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MoreActivity.class).putExtra(Constants.TOOLBAR_TITLE_KEY, "News Inside The Country")));
+        binding.liveSportsMoreTv.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MoreActivity.class).putExtra(Constants.TOOLBAR_TITLE_KEY, "Live Sports")));
+        binding.tvShowsMoreTv.setOnClickListener(view1 -> startActivity(new Intent(getActivity(), MoreActivity.class).putExtra(Constants.TOOLBAR_TITLE_KEY, "TV Shows")));
 
 
     }
