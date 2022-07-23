@@ -59,6 +59,10 @@ dependencies {
     //    It can help Android developers with supporting multiple screens.
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
 
+    
+    //Country Code Picker Library
+    implementation 'com.hbb20:ccp:2.6.0'
+
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
