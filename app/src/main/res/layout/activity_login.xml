@@ -9,14 +9,9 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/welcomeTextView"
         android:layout_marginTop="@dimen/_31sdp"
-        android:gravity="center"
         android:text="@string/welcome_to"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20ssp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +20,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_31sdp"
-        android:layout_marginTop="@dimen/_60sdp"
-        android:layout_marginEnd="@dimen/_31sdp"
-        android:layout_marginBottom="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:cardCornerRadius="15dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
@@ -37,64 +32,29 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <LinearLayout
+            android:id="@+id/login_with_phone_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/back_color"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:visibility="visible">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_25ssp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:text="@string/phone_number"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16ssp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:gravity="center"
-                android:text="@string/use_the_phone_number_to_register_or_login_ott" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/phone_number">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone_number_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <CheckBox
-                android:id="@+id/privacy_policy_checkbox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/privacy_policy" />
-
-            <Button
-                android:id="@+id/next_btn"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                android:text="@string/next" />
-
-
+            <include
+                android:id="@+id/login_with_phone"
+                layout="@layout/login_with_phone_layout" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_with_pass_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <include
+                android:id="@+id/login_with_password"
+                layout="@layout/login_with_pass_layout"
+                 />
+        </LinearLayout>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -144,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:background="@color/sign_up_with_buttons_back"
+                android:contentDescription="@string/facebook"
                 android:padding="5dp"
                 android:src="@drawable/facebook_black_and_white" />
 
@@ -153,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_6sdp"
                 android:background="@color/sign_up_with_buttons_back"
+                android:contentDescription="@string/twitter"
                 android:padding="5dp"
                 android:src="@drawable/twitter_black" />
         </LinearLayout>
