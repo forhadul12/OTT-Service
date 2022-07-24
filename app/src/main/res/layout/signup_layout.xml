@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_2sdp"
         app:cardCornerRadius="3dp">
-
         <include
             android:id="@+id/phone_number_container"
             layout="@layout/phone_number_layout" />
