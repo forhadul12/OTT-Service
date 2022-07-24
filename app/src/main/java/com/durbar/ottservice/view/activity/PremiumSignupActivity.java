@@ -16,7 +16,7 @@ public class PremiumSignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityPremiumSignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        String[] subsPlan = {"Weekly Plan","Monthly Plan", "Half-Yearly Plan", "Yearly Plan"};
+        String[] subsPlan = {"Daily Plan","Weekly Plan","Monthly Plan", "Half-Yearly Plan", "Yearly Plan"};
         String[] payWith = {"Pay With bKash","Pay With Nagad", "Pay With Upay", "Pay With Card"};
 
         ArrayAdapter planAdapter = new ArrayAdapter(getApplicationContext()
