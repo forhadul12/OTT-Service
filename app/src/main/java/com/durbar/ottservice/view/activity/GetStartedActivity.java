@@ -12,6 +12,7 @@ public class GetStartedActivity extends AppCompatActivity {
 
 
     private ActivityGetStartedBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
